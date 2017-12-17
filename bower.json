@@ -1,0 +1,21 @@
+{
+  "name": "spreadoutad.github.io",
+  "homepage": "https://github.com/spreadoutad/spreadoutad.github.io",
+  "authors": [
+    "Tony Lin <tony.lin@ardomusnet.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chart.js": "^2.7.1"
+  }
+}

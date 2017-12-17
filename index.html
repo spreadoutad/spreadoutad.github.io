@@ -49,6 +49,7 @@
         <li><a href="#home" class="page-scroll">Home</a></li>
         <li><a href="#about-section" class="page-scroll">About</a></li>
         <li><a href="#services-section" class="page-scroll">Services</a></li>
+        <li><a href="#statistic-section" class="page-scroll">Statistics</a></li>
         <li><a href="#team-section" class="page-scroll">Team</a></li>
         <li><a href="#contact-section" class="page-scroll">Contact</a></li>
       </ul>
@@ -138,6 +139,49 @@
   </div>
 </div>
 
+<div id="statistic-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Statistic</h2>
+      <hr>
+    </div>
+
+    <div id="row" class="row">
+      <div class="col-md-6 col-xs-12">
+        <canvas id="chart1" style="height:300px;"></canvas>   
+      </div>
+      
+      <div class="col-md-6 col-xs-12">
+        <h4>Impressions</h4>
+        <p>The total number of times all of your posts have been seen. From the statistic graph you can the impression number is growing very fast using our advertising software system</p>   
+      </div>      
+    </div>
+
+    <div id="row" class="row" style="margin-top: 48px;">    
+      <div class="col-md-6 col-xs-12">
+        <h4>Reaches</h4>
+        <p>The number of unique accounts that have seen any of your posts. From the statistic graph you can the reaches number is growing very fast using our advertising software system</p>   
+      </div>  
+
+      <div class="col-md-6 col-xs-12">
+        <canvas id="chart2" style="height:300px;"></canvas>   
+      </div>
+          
+    </div>
+
+    <div id="row" class="row" style="margin-top: 48px;">
+      <div class="col-md-6 col-xs-12">
+        <canvas id="chart3" style="height:300px;"></canvas>   
+      </div>
+      
+      <div class="col-md-6 col-xs-12">
+        <h4>Profile Views</h4>
+        <p>The number of time your profile was viewed. From the statistic graph you can the profile view number is growing very fast using our advertising software system</p>   
+      </div>      
+    </div>
+  </div>
+</div>  
+
 <!-- Team Section -->
 <div id="team-section">
   <div class="container">
@@ -147,7 +191,7 @@
     </div>
     <div id="row">
       <div class="col-md-3 col-sm-6 team">
-        <div class="thumbnail"> <img src="img/team/01.png" alt="..." class="team-img">
+        <div class="thumbnail"> <img src="img/team/01.jpg" alt="..." class="team-img">
           <div class="caption">
             <h3>Louis Lee</h3>
             <p>Founder, Planner</p>
@@ -164,6 +208,8 @@
       </div>
     </div>
   </div>
+
+
 </div>
 <!-- Contact Section -->
 <div id="contact-section">
@@ -233,6 +279,8 @@
 <script type="text/javascript" src="js/jquery.isotope.js"></script>
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
 <script type="text/javascript" src="js/contact_me.js"></script>
+
+<script type="text/javascript" src="bower_components/chart.js/dist/Chart.bundle.js"></script>
 
 <!-- Javascripts
     ================================================== -->

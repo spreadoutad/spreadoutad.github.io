@@ -4,6 +4,11 @@ function main() {
 (function () {
    'use strict';
 
+   var transparentize = function(color, opacity) {
+      var alpha = opacity === undefined ? 0.5 : 1 - opacity;
+      return Color(color).alpha(alpha).rgbString();
+    }
+
    /* ==============================================
   	Testimonial Slider
   	=============================================== */ 
@@ -66,6 +71,94 @@ function main() {
             });
             return false;
         });
+
+
+        var ctx1 = document.getElementById("chart1");     
+        var ctx2 = document.getElementById("chart2");   
+        var ctx3 = document.getElementById("chart3"); 
+
+        var options = {
+          maintainAspectRatio: false,
+          spanGaps: false,
+          elements: {
+            line: {
+              tension: 0.000001
+            }
+          },
+          plugins: {
+            filler: {
+              propagate: false
+            }
+          },
+          scales: {
+            xAxes: [{
+              ticks: {
+                autoSkip: false,
+                maxRotation: 0
+              }
+            }]
+          }
+        };   
+
+        new Chart(ctx1, {
+          type: 'line',
+          data: {
+            labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
+            datasets: [{
+              backgroundColor: transparentize('rgb(75, 192, 192)'),
+              borderColor: 'rgb(75, 192, 192)',
+              data:  [0, 85, 594, 909, 1336, 1883, 2355],
+              label: 'Impressions',
+              fill: 'start'
+            }]
+          },
+          options: Chart.helpers.merge(options, {
+            title: {
+              text: 'Impressions',
+              display: true
+            }
+          })
+        });    
+
+        new Chart(ctx2, {
+          type: 'line',
+          data: {
+            labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
+            datasets: [{
+              backgroundColor: transparentize('rgb(255, 159, 64)'),
+              borderColor: 'rgb(255, 159, 64)',
+              data:  [0, 29, 186, 276, 423, 589, 753],
+              label: 'Reaches',
+              fill: 'start'
+            }]
+          },
+          options: Chart.helpers.merge(options, {
+            title: {
+              text: 'Reaches',
+              display: true
+            }
+          })
+        });  
+
+        new Chart(ctx3, {
+          type: 'line',
+          data: {
+            labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
+            datasets: [{
+              backgroundColor: transparentize('rgb(255, 99, 132)'),
+              borderColor: 'rgb(255, 99, 132)',
+              data:  [0, 52, 540, 788, 1173, 1628, 2072],
+              label: 'Profile Views',
+              fill: 'start'
+            }]
+          },
+          options: Chart.helpers.merge(options, {
+            title: {
+              text: 'Profile Views',
+              display: true
+            }
+          })
+        });      
 
     });
 

@@ -180,6 +180,21 @@ header p {
 	margin-top: 20px;
 	margin-bottom: 30px;
 }
+
+/* About Section */
+#statistic-section {
+	padding: 100px 0;
+	background-color: #f6f6f6;
+}
+#statistic-section h4 {
+	border-bottom: 1px solid #b8dea2;
+	padding-bottom: 20px;
+	display: inline-block;
+}
+#statistic-section p {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
 /* Team Section */
 #team-section {
 	padding: 100px 0;
